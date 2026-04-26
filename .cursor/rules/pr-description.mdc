@@ -1,0 +1,52 @@
+---
+alwaysApply: false
+---
+
+# PR Description Generator
+
+Generate a pull request description by analyzing the diff between the current branch and main branch.
+
+## Output Format
+
+Create a well-structured PR description with these sections:
+
+### What Changed
+- Clear, concise bullet points in imperative mood
+- Examples: "Add user authentication", "Fix race condition in order processing", "Refactor database query logic"
+- Focus on user-facing changes and significant technical modifications
+
+### Why
+- Brief explanation of the motivation and context
+- For small changes: 1-2 sentences
+- For architectural decisions: a short paragraph explaining tradeoffs and rationale
+- Reference any related issues, tickets, or discussions
+
+### Testing
+- Specify testing approach used or required:
+  - Unit tests added/updated
+  - Integration tests run
+  - Manual testing steps performed
+  - Edge cases validated
+- Note if additional testing is recommended before merge
+
+### Deployment Notes
+- Environment variables that need updating
+- Database migrations required
+- Feature flags to toggle
+- Configuration changes needed
+- Any breaking changes or backwards compatibility notes
+
+### Next Steps
+- Follow-up work or TODOs intentionally deferred
+- Related PRs or dependencies
+- Known limitations or tech debt incurred
+
+## Instructions
+
+1. Use @Codebase to review actual file changes
+2. Keep descriptions concise and scannable
+3. Use markdown formatting (headers, bullets, code blocks)
+4. Output as a copyable markdown block
+5. Prioritize clarity over completeness - highlight what matters most
+
+Generate the description now.
